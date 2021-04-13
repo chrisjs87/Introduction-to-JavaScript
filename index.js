@@ -18,7 +18,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let votingAge = 18
+if(votingAge >= 18){
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -31,9 +34,11 @@ Do the following:
    HINT: no function required
 */
 
-
-
-
+// let testVariable1 = 1;
+// let mySecond = 2;
+// if(mySecond === 2){
+//   testVariable1 = 2;
+// }
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -46,8 +51,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+let myString = "1999";
+myString = Number(myString);
+console.log(myString);
 
 /*
 Task 1d - Multiply
@@ -58,11 +64,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a*b;
   }
-
-
+multiply(3,3);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,10 +79,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+    return humanYears*7;
 }
-
+dogYears(1);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,11 +112,25 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if(age >= 1 && weight <= 5){
+    return weight * 0.05;
+  }else if(age >= 1 && weight >= 6 && weight <= 10){
+    return weight * 0.04;
+  }else if(age >= 1 && weight >= 11 && weight <= 15){
+    return weight * 0.03;
+  }else if(age >= 1 && weight > 15){
+    return weight * 0.02;
+  }else if(age >= 2/12 && age <= 4/12){
+    return weight * 0.10;
+  }else if(age > 4/12 && age <= 7/12){
+    return weight * 0.05;
+  }else if(age > 7/12 && age < 1){
+    return weight * 0.04
   }
+}
 
-
+hungryDog(15,1);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -134,8 +153,26 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
+let computersChoice = Math.floor((Math.random() * 3) + 1);
+
+
 function game(user, computer){
-    /*add your code here*/
+  let usersChoice = user;
+  if(usersChoice === computersChoice){
+    return "it's a tie";
+  }else if(computersChoice === 3 && usersChoice === 2){
+    return "you lose!";
+  }else if(computersChoice === 2 && usersChoice === 3){
+    return "you win!";
+  }else if(computersChoice === 2 && usersChoice === 1){
+    return "you lose!";
+  }else if(computersChoice === 1 && usersChoice === 2){
+    return "you win!";
+  }else if(computersChoice === 1 && usersChoice === 3){
+    return "you lose!";
+  }else if(computersChoice === 3 && usersChoice === 1){
+    return "you win!";
+  }
 }
   
   
