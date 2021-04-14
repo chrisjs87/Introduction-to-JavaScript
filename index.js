@@ -155,27 +155,6 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-//let computer = Math.floor((Math.random() * 3) + 1);
-
-// function game(user, computer){
-//   if(user === computer){
-//     return "it's a tie";
-//   }else if(computer === 3 && user === 2){
-//     return "you lose!";
-//   }else if(computer === 2 && user === 3){
-//     return "you win!";
-//   }else if(computer === 2 && user === 1){
-//     return "you lose!";
-//   }else if(computer === 1 && user === 2){
-//     return "you win!";
-//   }else if(computer === 1 && user === 3){
-//     return "you lose!";
-//   }else if(computer === 3 && user === 1){
-//     return "you win!";
-//   }
-// }
-
-
 function game(user, computer){
   if(user === computer){
     return "it's a tie";
