@@ -34,11 +34,12 @@ Do the following:
    HINT: no function required
 */
 
-// let testVariable1 = 1;
-// let mySecond = 2;
-// if(mySecond === 2){
-//   testVariable1 = 2;
-// }
+let testVariable1 = 1;
+let testVariable2 = 2;
+if(testVariable2 === 2){
+  testVariable1 = 2;
+}
+console.log(testVariable1);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -220,7 +221,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(bottlesOfSoda){
     for(let i = bottlesOfSoda; i > 0; i--){
-      return `${bottlesOfSoda} bottles of soda on the wall, ${bottlesOfSoda} bottles of soda, take one down pass it around ${bottlesOfSoda - 1} bottles of soda on the wall`
+      return `${bottlesOfSoda} bottles of soda on the wall, ${bottlesOfSoda} bottles of soda, take one down pass it around ${bottlesOfSoda - 1} bottles of soda on the wall`;
     }
   }
 
@@ -269,9 +270,9 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
-}
+// function vowelCounter(/*add your code here*/) {
+//     /*add your code here*/
+// }
 
 
 
