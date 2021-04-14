@@ -137,6 +137,7 @@ hungryDog(15,1);
 // Rock, Paper, Scissors - Let's play against the computer!
 /*
 Create a global variable that randomly generates the computer's choice
+DONE
 Use Math.random to determine the computers choice (Math.random gives a random number between 0 and 1)
 
 HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
@@ -153,29 +154,28 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-let computersChoice = Math.floor((Math.random() * 3) + 1);
-
+//let computer = Math.floor((Math.random() * 3) + 1);
 
 function game(user, computer){
-  let usersChoice = user;
-  if(usersChoice === computersChoice){
+  computer = Math.floor((Math.random() * 3) + 1);
+ 
+  if(user === computer){
     return "it's a tie";
-  }else if(computersChoice === 3 && usersChoice === 2){
+  }else if(computer === 3 && user === 2){
     return "you lose!";
-  }else if(computersChoice === 2 && usersChoice === 3){
+  }else if(computer === 2 && user === 3){
     return "you win!";
-  }else if(computersChoice === 2 && usersChoice === 1){
+  }else if(computer === 2 && user === 1){
     return "you lose!";
-  }else if(computersChoice === 1 && usersChoice === 2){
+  }else if(computer === 1 && user === 2){
     return "you win!";
-  }else if(computersChoice === 1 && usersChoice === 3){
+  }else if(computer === 1 && user === 3){
     return "you lose!";
-  }else if(computersChoice === 3 && usersChoice === 1){
+  }else if(computer === 3 && user === 1){
     return "you win!";
   }
 }
-  
-  
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -184,12 +184,12 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
   1. Receive a number of kilometers
-  2. Convert the number of kiolmeters received to miles
+  2. Convert the number of kilometers received to miles
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return (kilometers*0.621371);
   }
 
 
@@ -202,8 +202,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(centimeters){
+    return centimeters/30.48;
   }
  
 
@@ -218,8 +218,10 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(bottlesOfSoda){
+    for(let i = bottlesOfSoda; i > 0; i--){
+      return `${bottlesOfSoda} bottles of soda on the wall, ${bottlesOfSoda} bottles of soda, take one down pass it around ${bottlesOfSoda - 1} bottles of soda on the wall`
+    }
   }
 
 
@@ -238,9 +240,19 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >= 90){
+    return 'you got an A';
+  }else if(score >= 80 && score <= 89){
+    return 'you got a B';
+  }else if(score >= 70 && score <= 79){
+    return 'you got a C';
+  }else if(score >= 60 && score <= 69){
+    return 'you got a D';
+  }else if(score < 60){
+    return 'you got an F';
   }
+}
   
   
 
