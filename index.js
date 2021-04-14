@@ -157,23 +157,44 @@ Use the game function below to do the following:
 
 //let computer = Math.floor((Math.random() * 3) + 1);
 
+// function game(user, computer){
+//   if(user === computer){
+//     return "it's a tie";
+//   }else if(computer === 3 && user === 2){
+//     return "you lose!";
+//   }else if(computer === 2 && user === 3){
+//     return "you win!";
+//   }else if(computer === 2 && user === 1){
+//     return "you lose!";
+//   }else if(computer === 1 && user === 2){
+//     return "you win!";
+//   }else if(computer === 1 && user === 3){
+//     return "you lose!";
+//   }else if(computer === 3 && user === 1){
+//     return "you win!";
+//   }
+// }
+
+
 function game(user, computer){
-  computer = Math.floor((Math.random() * 3) + 1);
- 
   if(user === computer){
     return "it's a tie";
-  }else if(computer === 3 && user === 2){
-    return "you lose!";
-  }else if(computer === 2 && user === 3){
+  }
+  
+  else if(user === 'rock' && computer === 'scissors'){
     return "you win!";
-  }else if(computer === 2 && user === 1){
-    return "you lose!";
-  }else if(computer === 1 && user === 2){
+  }else if(user === 'paper' && computer === 'rock'){
     return "you win!";
-  }else if(computer === 1 && user === 3){
-    return "you lose!";
-  }else if(computer === 3 && user === 1){
+  }else if(user === 'scissors' && computer === 'paper'){
     return "you win!";
+  }
+  
+  else if(user === 'rock' && computer === 'paper'){
+    return "you lose!";
+  }else if(user === 'paper' && computer === 'scissors'){
+    return "you lose!";
+  }else if(user === 'scissors' && computer === 'rock'){
+    return "you lose!";
   }
 }
 
